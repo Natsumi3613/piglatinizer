@@ -6,7 +6,15 @@
 
 // Document Ready Function. All of your jQuery should go in here. 
 $( document ).ready(function() {
-  
+  $("#submit").click(function(){
+    var message=$("#msg").val();
+    var catMessage = meow(message);
+    $("#result").text(catMessage);
+});
+
+function meow(word){
+ return word + "meow";    
+}
 
 
 

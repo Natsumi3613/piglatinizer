@@ -1,1 +1,15 @@
+body{
+    text-align: center;
+}
+#text{
+    border-radius: 30px;
+}
+#msg{
+    max-width: 80%;
+    height: 60px;
+    border-radius: 30px;
+}
 
+.btn-round-lg{
+border-radius: 22.5px;
+}
