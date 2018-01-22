@@ -5,19 +5,35 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
-$( document ).ready(function() {
+$(document).ready(function(){
+  
+  $("input").keyup(function(event){
+    if (event.keyCode === 13){
+      $("#submit").click();
+    }
+  });
+  
   $("#submit").click(function(){
-    var message=$("#msg").val();
-    var catMessage = meow(message);
-    $("#result").text(catMessage);
-});
+    var message = $("#msg").val().split(" ");
 
-function meow(word){
- return word + "meow";    
-}
+    function meow(word){
+      var v = ["a", "e", "i", "o", "u"];
+      var firstChar = word.charAt(0);
+      if(v.includes(firstChar)){
+        return word + "meow ";
+      }
+    }
+    
+    // message = ['jennifer', 'says', 'meow']
+    var catMessage = '';
+    for(var i = 0; i < message.length; i = i + 1){
+      catMessage += meow(message[i]);
+    }
+    
+    $("#result").html(catMessage);
 
-
-
+  });
+  
 });
 
 
