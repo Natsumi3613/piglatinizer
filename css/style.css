@@ -1,6 +1,7 @@
 body{
     text-align: center;
- 
+    background:url("http://pianoartsschool.com/images/gallery/kitten-on-piano-wallpaper.jpg");
+    background-size: cover;
     font-family: 'Courgette', cursive;
     
 }

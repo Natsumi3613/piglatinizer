@@ -13,11 +13,14 @@ $(document).ready(function(){
     }
   });
     $('#clear').click(function(){
-                location.reload();
-        });
+      $("#result").html("");
+      $("#msg").val("");
+      
+    });
+  
   $("#submit").click(function(){
     var message = $("#msg").val().split(" ");
-
+    $("#msg").val("");
     function meow(word){
       var v = ["a", "e", "i", "o", "u"];
       var firstChar = word.charAt(0);
