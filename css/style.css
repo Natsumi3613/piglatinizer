@@ -1,5 +1,8 @@
 body{
     text-align: center;
+ 
+    font-family: 'Courgette', cursive;
+    
 }
 #text{
     border-radius: 30px;

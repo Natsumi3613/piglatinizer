@@ -12,7 +12,9 @@ $(document).ready(function(){
       $("#submit").click();
     }
   });
-  
+    $('#clear').click(function(){
+                location.reload();
+        });
   $("#submit").click(function(){
     var message = $("#msg").val().split(" ");
 
@@ -21,12 +23,18 @@ $(document).ready(function(){
       var firstChar = word.charAt(0);
       if(v.includes(firstChar)){
         return word + "meow ";
+      
+      }else{
+        // everything but first letter + first letter + meow
+        return word.slice(1) + word.slice(0,1) + "meow ";
       }
+      
     }
     
-    // message = ['jennifer', 'says', 'meow']
-    var catMessage = '';
-    for(var i = 0; i < message.length; i = i + 1){
+    
+  
+    var catMessage = " ";
+    for(var i = 0; i < message.length; i++){
       catMessage += meow(message[i]);
     }
     
